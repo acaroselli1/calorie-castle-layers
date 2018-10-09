@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="calorie-castle-cl">
+      <HintPath>..\calorie-castle-cl\bin\Debug\netcoreapp2.0\calorie-castle-cl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

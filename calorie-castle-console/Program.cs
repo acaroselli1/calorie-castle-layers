@@ -1,12 +1,57 @@
-﻿using System;
+﻿using castle_grimtolCL;
+using System;
 
-namespace calorie_castle_console
+namespace CastleGrimtol
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameApi game = new GameApi();
+
+            Console.WriteLine("");
+            Console.WriteLine("Welcome to Calorie Castle!");
+            Console.WriteLine("");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(game.processCommand("H"));
+            game.startGame();
+
+            
+            string PlayerChoice;
+
+            bool playing = true;
+
+            while (playing)
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("What would you like to do next? (Note: You can not use food items you have not taken.)");
+                Console.ResetColor();
+                PlayerChoice = Console.ReadLine();
+                if (PlayerChoice == "H")
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(game.processCommand(PlayerChoice));
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(game.processCommand(PlayerChoice));
+                }
+            }
+
+
         }
+
+
+        // Game loop 
+
+
+
+
+
+
     }
 }
+

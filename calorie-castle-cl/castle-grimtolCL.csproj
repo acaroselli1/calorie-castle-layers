@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="castle-grimtolCL.csproj" />
-  </ItemGroup>
-
 </Project>
